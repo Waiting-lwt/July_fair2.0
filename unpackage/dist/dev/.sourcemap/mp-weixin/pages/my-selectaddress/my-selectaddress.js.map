@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,4O;AACAA,UAAU,CAACC,wBAAD,CAAV,C","file":"pages/my-selectaddress/my-selectaddress.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/my-selectaddress/my-selectaddress.vue'\ncreatePage(Page)"],"sourceRoot":""}
