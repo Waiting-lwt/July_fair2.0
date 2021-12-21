@@ -1,1 +1,0 @@
-<view><view class="container"><image src="../../static/upload/register2.png" mode="aspectFill"></image><view data-event-opts="{{[['tap',[['toLogin']]]]}}" class="login-button" bindtap="__e"><text></text><text>点击进入注册界面</text><view class="img-right"><image src="../../static/images/right.png" mode="aspectFill"></image></view></view></view></view>

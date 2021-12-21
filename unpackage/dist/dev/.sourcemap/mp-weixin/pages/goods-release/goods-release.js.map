@@ -1,1 +1,0 @@
-{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,mO;AACAA,UAAU,CAACC,qBAAD,CAAV,C","file":"pages/goods-release/goods-release.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/goods-release/goods-release.vue'\ncreatePage(Page)"],"sourceRoot":""}
