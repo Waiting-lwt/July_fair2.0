@@ -1,0 +1,322 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		
+		{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/select-tags/select-tags",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "主页"
+			}
+		},
+		
+		{
+			"path": "pages/auction/auction",
+			"style": {
+				"navigationBarTitleText": "拍卖"
+			}
+		},
+		
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		
+        {
+            "path" : "components/springTabs/springTabs",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,
+		
+		{
+            "path" : "pages/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,
+		
+		{
+            "path" : "pages/orders-select-address/orders-select-address",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,
+		{
+            "path" : "pages/goods-confirm-buy/goods-confirm-buy",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+<<<<<<< HEAD
+=======
+        
+        ,{
+            "path" : "pages/goods-success-order/goods-success-order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/goods-success-order-logistics/goods-success-order-logistics",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+>>>>>>> de9c045b9ce5506bf78036e45105aa5be4634cdc
+    ],
+	"subPackages":[
+		{
+			"root":"pagesA",
+			"pages":[
+				{
+					"path":"search/search",
+					"style" :
+					{
+					    "navigationBarTitleText": "发现",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"auctions-release/auctions-release",
+					"style" :
+					{
+					    "navigationBarTitleText": "发现",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"search_result/search_result",
+					"style" :
+					{
+					    "navigationBarTitleText": "搜索结果",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"goods-release/goods-release",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"auctions_goods-tagsadd/auctions_goods-tagsadd",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root":"pagesB",
+			"pages":[
+				{
+					"path":"auction-goodsdetail-userlist/auction-goodsdetail-userlist",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"goods-confirm-buy/goods-confirm-buy",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"goods-detail-auction/goods-detail-auction",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"goods-detail/goods-detail",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"goods-success-order/goods-success-order",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+					
+				},
+				{
+					"path":"goods-success-order-logistics/goods-success-order-logistics",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+					
+				}
+			]
+		},
+		{
+			"root":"pagesC",
+			"pages":[
+				{
+					"path":"my-address/my-address",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"my-selectaddress/my-selectaddress",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"person-me/person-me",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root":"pagesD",
+			"pages":[
+				{
+					"path":"auctions-success-address/auctions-success-address",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"auctions-success-order/auctions-success-order",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"my-orders/my-orders",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"my-collections/my-collections",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path":"my-morehistory/my-morehistory",
+					"style" :
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+				}
+			]
+		}
+		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	
+	"tabBar":{
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"iconPath":"./static/icon/bazzar.png",
+				"selectedIconPath":"./static/icon/bazzarSelected.png"
+			},
+			{
+				 "pagePath":"pages/auction/auction",
+				"iconPath":"./static/icon/wander.png",
+				"selectedIconPath":"./static/icon/wanderSelected.png"
+			},
+			{
+				"pagePath":"pages/my/my",
+				"iconPath":"./static/icon/mine.png",
+				"selectedIconPath":"./static/icon/mineSelected.png"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

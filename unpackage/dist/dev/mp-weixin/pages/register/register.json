@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "xp-picker": "/components/xp-picker/xp-picker",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}
