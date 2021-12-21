@@ -32,18 +32,10 @@
 					</view>
 					
 					<view class="addressInfo-block2">
-<<<<<<< HEAD:pagesB/goods-confirm-buy/goods-confirm-buy.vue
 						<text class="addressInfo-text">{{addr_tname||"name"}}</text>
 						<text class="addressInfo-text">{{addr_phone||"phone"}}</text>
 						<text class="addressInfo-text">{{addr_location||"address"}}</text>
 					</view>
-=======
-						<text class="addressInfo-text">{{address.tname||"name"}}</text>
-						<text class="addressInfo-text">{{address.phone||"phone"}}</text>
-						<text class="addressInfo-text">{{address.location||"address"}}</text>
-					</view>
-					
->>>>>>> de9c045b9ce5506bf78036e45105aa5be4634cdc:pages/goods-confirm-buy/goods-confirm-buy.vue
 				</view>
 				<view class="addressAdd">
 					<text @tap="editAddr()">选择地址</text>
@@ -61,17 +53,15 @@
 		data() {
 			return {
 				goodInfo: {},
-<<<<<<< HEAD:pagesB/goods-confirm-buy/goods-confirm-buy.vue
 				addr_tname:'',
 				addr_phone:'',
 				addr_location:'',
-=======
 				address: {
 					tname: "",
 					phone: "",
 					location: ""
-				}
->>>>>>> de9c045b9ce5506bf78036e45105aa5be4634cdc:pages/goods-confirm-buy/goods-confirm-buy.vue
+				},
+				userid:getApp().globalData.userid,
 			}
 		},
 		methods: {
@@ -85,7 +75,7 @@
 				let res = await this.$myRequest({
 					url: "/address/getByUserId",
 					data:{
-						userId: window.sessionStorage.getItem('userId')
+						userId: this.userid
 					},
 				})
 				this.addr_location = res.data.data[0].location

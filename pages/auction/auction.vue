@@ -127,7 +127,7 @@
 			},*/
 			toGoodsRelease(){
 				uni.navigateTo({
-					url: "../../pages/goods-release/goods-release?userid=" + this.userid
+					url: "../../pagesA/auctions-release/auctions-release?userid=" + this.userid
 				})
 			},
 			// 点击商品去商品详情页
@@ -139,7 +139,7 @@
 				this.objo = this.goods[index]
 				this.objo = JSON.stringify(this.objo)
 				uni.navigateTo({
-					url: '../../pages/goods-detail-auction/goods-detail-auction?objo=' + this.objo
+					url: '../../pagesB/goods-detail-auction/goods-detail-auction?objo=' + this.objo
 				});
 				
 				console.log(this.objo)

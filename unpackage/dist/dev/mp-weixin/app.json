@@ -7,7 +7,9 @@
     "pages/my/my",
     "components/springTabs/springTabs",
     "pages/register/register",
-    "pages/orders-select-address/orders-select-address"
+    "pages/orders-select-address/orders-select-address",
+    "pages/goods-success-order/goods-success-order",
+    "pages/goods-success-order-logistics/goods-success-order-logistics"
   ],
   "subPackages": [
     {

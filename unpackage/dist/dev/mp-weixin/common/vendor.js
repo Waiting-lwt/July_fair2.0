@@ -914,7 +914,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2152,9 +2152,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 12:
-/*!**************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/utils/api.js ***!
-  \**************************************************************/
+/*!************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/utils/api.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2234,9 +2234,9 @@ var chooseImage = function chooseImage() {
 /***/ }),
 
 /***/ 13:
-/*!*********************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/utils/formatDate.js ***!
-  \*********************************************************************/
+/*!*******************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/utils/formatDate.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2271,9 +2271,9 @@ var formatTime = function formatTime(date) {
 /***/ }),
 
 /***/ 14:
-/*!**********************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/polyfill/polyfill.js ***!
-  \**********************************************************************/
+/*!********************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/polyfill/polyfill.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3345,9 +3345,9 @@ module.exports = {
 /***/ }),
 
 /***/ 15:
-/*!**************************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/polyfill/base64Binary.js ***!
-  \**************************************************************************/
+/*!************************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/polyfill/base64Binary.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3440,9 +3440,9 @@ module.exports = {
 /***/ }),
 
 /***/ 16:
-/*!********************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/polyfill/mixins.js ***!
-  \********************************************************************/
+/*!******************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/polyfill/mixins.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9062,7 +9062,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -9083,14 +9083,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9176,7 +9176,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"July_fair","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9584,10 +9584,10 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 238:
-/*!******************************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/components/xp-picker/util.js ***!
-  \******************************************************************************/
+/***/ 270:
+/*!****************************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/components/xp-picker/util.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9700,15 +9700,15 @@ function time2Timestamp(timer) {
 
 /***/ }),
 
-/***/ 246:
-/*!*******************************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/components/uni-popup/popup.js ***!
-  \*******************************************************************************/
+/***/ 278:
+/*!*****************************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/components/uni-popup/popup.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 247));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 279));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 // 定义 type 类型:弹出类型：top/bottom/center
 var config = {
   // 顶部弹出
@@ -9735,10 +9735,10 @@ var config = {
 
 /***/ }),
 
-/***/ 247:
-/*!*********************************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/components/uni-popup/message.js ***!
-  \*********************************************************************************/
+/***/ 279:
+/*!*******************************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/components/uni-popup/message.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9766,10 +9766,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 262:
-/*!*******************************************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/components/region-picker/region-picker.js ***!
-  \*******************************************************************************************/
+/***/ 294:
+/*!*****************************************************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/components/region-picker/region-picker.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -11031,9 +11031,9 @@ function walkJsonObj(jsonObj, walk) {
 /***/ }),
 
 /***/ 5:
-/*!************************************************************!*\
-  !*** D:/ZStudy/3_1/七月/July_fair/July_fair12.20/pages.json ***!
-  \************************************************************/
+/*!**********************************************************!*\
+  !*** D:/ZStudy/3_1/七月/July_fair/July_fair2.0/pages.json ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

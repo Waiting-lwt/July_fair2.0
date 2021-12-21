@@ -150,8 +150,8 @@
 		data() {
 			return {
 				// app:getApp(),
-				userid:getApp().globalData.userid,
-				// userid:1,
+				// userid:getApp().globalData.userid,
+				userid:1,
 				//表示的是缓存里面的数据
 				userInfo: {},
 				//表示 的是用户我的页表里面的数据

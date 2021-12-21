@@ -44,7 +44,8 @@
 			</view>
 			
 			<view class="content">
-				<view class="goods-item" v-for="(item,index1) in showMarket" @tap="toClassify(item.id)">
+				<view class="goods-item" v-for="(item,index1) in showMarket" 
+					@click="toGoodOrder(item.id)">
 				    <view class="item-img">
 						<view>
 							<image class="item-pic" mode="scaleToFill" :src="item.introImage[0]"></image>
@@ -143,7 +144,7 @@
 		
 			<!-- 竞拍 -->
 			<view class="content" v-if="auctionIndex==0">
-				<view class="goods-item" v-for="(item,index1) in showAuction" :key="item.good_id" @tap="toClassify(item.id)">
+				<view class="goods-item" v-for="(item,index1) in showAuction" :key="item.good_id" >
 				    <view class="item-img">
 						<image class="item-pic" mode="scaleToFill" :src="item.intro_image[0]"></image>
 						<view class="seller-item" v-if="item.portrait">
@@ -181,7 +182,7 @@
 			
 			<!-- 拍品 -->
 			<view class="content" v-if="auctionIndex==1">
-				<view class="goods-item" v-for="(item,index1) in showAuction" @tap="toClassify(item.id)"
+				<view class="goods-item" v-for="(item,index1) in showAuction"
 				:class="{outTime:(item.status=='无人竞拍已超时')}">
 				    <view class="item-img">
 						<image class="item-pic" mode="scaleToFill" :src="item.intro_image[0]"></image>
@@ -273,6 +274,12 @@
 					this.changeAucIndex(this.auctionIndex)
 				}
 			},
+			toGoodOrder(id){
+				console.log(id)
+				uni.navigateTo({
+					url:'../../pagesB/goods-success-order/goods-success-order?orderId=' + id,
+				})
+			},
 			//yedn:跳转到生成订单页面
 			goToConfirmAddress(index1) {
 				console.log(index1)
@@ -281,7 +288,7 @@
 				this.objo = JSON.stringify(this.objo)
 				if(this.showAuction[index1].status =='完善收获信息') {
 					uni.navigateTo({
-						url:"../auctions-success-address/auctions-success-address?objo=" + this.objo
+						url:"../../pagesD/auctions-success-address/auctions-success-address?objo=" + this.objo
 					})
 				}
 				

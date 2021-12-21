@@ -52,7 +52,7 @@
 			<view class="bt1Btn">
 				<text>修改地址</text>
 			</view>
-			<view class="bt1Btn">
+			<view class="bt1Btn" @click="toOrderLogistics()">
 				<text>查看物流</text>
 			</view>
 			<view class="bt2Btn">
@@ -72,13 +72,10 @@
 		},
 
 		onLoad(option) {
-			if(option===null){
-				
+			if(Object.keys(option).length===0){
+				option.orderId = 16
 			}
-			else{
-				option.orderId = 6
-				this.getOrder(option.orderId)
-			}
+			this.getOrder(option.orderId)
 		},
 
 		methods: {
@@ -95,6 +92,11 @@
 			},
 			pasteAddr(){
 				
+			},
+			toOrderLogistics(){
+				uni.navigateTo({
+					url: "../goods-success-order-logistics/goods-success-order-logistics?orderId="+this.order.orders_id,
+				})
 			}
 		}
 	}

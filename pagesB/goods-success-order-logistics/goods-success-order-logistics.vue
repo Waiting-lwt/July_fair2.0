@@ -42,13 +42,10 @@
 			}
 		},
 		onLoad(option) {
-			if(option===null){
-				
-			}
-			else{
+			if(Object.keys(option).length===0){
 				option.orderId = 6
-				this.getLogistic(option.orderId)
 			}
+			this.getLogistic(option.orderId)
 		},
 		
 		methods: {

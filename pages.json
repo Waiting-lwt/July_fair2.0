@@ -73,19 +73,6 @@
             }
             
         }
-        ,
-		{
-            "path" : "pages/goods-confirm-buy/goods-confirm-buy",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        
-<<<<<<< HEAD
-=======
         
         ,{
             "path" : "pages/goods-success-order/goods-success-order",
@@ -105,7 +92,6 @@
             }
             
         }
->>>>>>> de9c045b9ce5506bf78036e45105aa5be4634cdc
     ],
 	"subPackages":[
 		{
