@@ -109,7 +109,10 @@
 .top-search-input .input-box {
   flex: 1;
   border-radius: 40rpx;
-  border: 2rpx solid;
+  background-color: #F7f7f7;
+}
+.top-search-input .input-box > input {
+  padding-left: 40rpx;
 }
 .search-Tabs {
   display: flex;

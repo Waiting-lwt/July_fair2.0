@@ -39,6 +39,10 @@
 		<view class="items-paimai">
 			<view class="items-paimai-list">
 				<!-- 左边的榜单部分 -->
+				<view class="noPerson" v-if="totalBidPerson==0"><!-- 无人竞拍的榜单 -->
+				    <view class="noPersonText">...当前无人竞拍...</view>
+				</view>
+				<view v-if="totalBidPerson==1"><!-- 有人竞拍的榜单 -->
 				<view class="goodsList-items">
 					<view class="goodsList-items-text">
 						<text>NO.1</text>
@@ -59,6 +63,9 @@
 						<text></text>
 					</view>
 				</view>
+				</view>
+				
+				
 			</view>
 			<view class="btn-paimai" @click="open">
 				<!-- 右边的拍卖大按钮 -->
@@ -74,7 +81,7 @@
 			<view class="pop-bottom-container">
 				<text>竞拍价</text>
 				<text>当 前 最 高 7 0 币</text>
-				<input type="text" value="" placeholder="请输入您的出价" />
+				<input value="" v-model="price" v-model.trim="msg" v-model.number="age" type="number" placeholder="请输入您的出价" />
 				<text>注：只能输入比目前最高价更高的价格哦~</text>
 				<view class="pop-offerPrice-btn" @click="open1">
 					<text>出价</text>
@@ -175,6 +182,7 @@
 	export default {
 		data() {
 			return {
+				price:'',      //出价的价格
 				goodsInfoId: '',
 				goodsInfoIds: '',
 				obji: '',
@@ -182,7 +190,8 @@
 				auctionInfo: '',
 				imageurl: '',
 				userId: '',
-				userInfo: ''
+				userInfo: '',
+				totalBidPerson:'',//判断是否有人竞拍，来显示不同榜单
 
 			}
 		},
@@ -205,8 +214,15 @@
 					url: '/goods/getAuctionStatus?id=' + this.auctionId
 				})
 				this.auctionInfo = res
-				console.log(res)
+				console.log('获取拍卖品信息：',res)
+				console.log('appdata里的：',this.auctionInfo)
+				if(res.data.data.totalBidPerson) {
+					this.totalBidPerson = 1
+				}else {
+					this.totalBidPerson = 0
+				}
 			},
+			
 			open() {
 				// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
 				this.$refs.popup.open('bottom')
@@ -243,7 +259,7 @@
 					url: '/user/baseInformation?id=' + this.userId
 				})
 				this.userInfo = res
-				console.log(res)
+				console.log('作者的用户id：',res)
 			},
 
 		}
@@ -379,6 +395,15 @@
 				width: 488rpx;
 				background-color: #E8E8E8;
 
+				.noPerson {
+	                margin-left: 172rpx;
+					.noPersonText{
+						color:#4F73A5;
+						font-size: 24rpx;
+						margin-top: 70rpx;
+					}
+				}
+				
 				.goodsList-items {
 					display: flex;
 					flex-direction: column;
@@ -449,7 +474,7 @@
 			.btn-paimai {
 				width: 142rpx;
 				height: 142rpx;
-				background-color: #C2C2C2;
+				background-color: #006AD7;
 
 				.btn-paimai-image {
 					width: 62rpx;

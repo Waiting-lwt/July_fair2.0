@@ -46,10 +46,10 @@
 					success: function(userRes) {
 						console.log('获取成功: ', userRes)
 						//********************************************************
-						uni.showToast({
-							icon: 'none',
-							title: '获取成功'
-						})
+						// uni.showToast({
+						// 	icon: 'none',
+						// 	title: '获取成功'
+						// })
 						let code = ''
 						let avatarUrl = userRes.userInfo.avatarUrl
 						let gender = userRes.userInfo.gender
@@ -60,47 +60,43 @@
 							provider: 'weixin',
 
 							success: loginRes => {
-								console.info('获取code', loginRes),
+								console.info('获取code请求结果:', loginRes),
 									code = loginRes.code,          //存code
 									console.info('code:', code),
                                     //********************************************************
-                                    uni.showToast({
-                                    	icon: 'none',
-                                    	title: '获取code成功'
-                                    })
-									console.log(avatarUrl)
+                                    // uni.showToast({
+                                    // 	icon: 'none',
+                                    // 	title: '获取code成功'
+                                    // })
 								uni.request({                  //获取token
-									url: 'http://120.24.48.171:8081/user/login?code=' + code,
+									url: 'https://fancrazy.xyz:8081/user/login?code=' + code,
+									//url: 'https://120.24.48.171:8081/user/login?code=' + code,
 									method: 'POST',
-									success: function(res) {      
-										
-										// openId = res.data.data.openid
-										// Type = res.data.data.type
-										console.log('login返回的结果：token',res)      //获取token成功
-										//********************************************************
-										uni.showToast({
-											icon: 'none',
-											title: '获取token成功'
-										})
+									success: function(res) {
+										console.log('login结果：获取token',res)      //获取token成功
+										// uni.showToast({
+										// 	icon: 'none',
+										// 	title: '获取token成功'
+										// })
 										let token = res.data.data
-										console.log('存到本地的token：',token)
+										console.log('存到appdata的token：',token)
 										let openid = ''
 										let Type = ''
 										let userid = ''
 										uni.request({                                   //发送token获取openid，userid，type
-											url:'http://120.24.48.171:8081/user/regInformation',
+											url:'https://fancrazy.xyz:8081/user/regInformation',
 											header:{token},
 											success:function(res2){
-												console.log('带token请求得id：',res2)            //获取openid，userid，type成功
+												console.log('发token换openid，uerid，type请求结果：',res2)            //获取openid，userid，type成功
 												//********************************************************
-												uni.showToast({
-													icon: 'none',
-													title: '获取openid，userid，type成功'
-												})
+												// uni.showToast({
+												// 	icon: 'none',
+												// 	title: '获取openid，userid，type成功'
+												// })
 												openid = res2.data.data.openId
 												userid = res2.data.data.userId
 												Type = res2.data.data.type
-												console.log('temp结果：openid：',openid,'userid:',userid,'Type:',Type);
+												console.log('存到appdata的openid：',openid,'userid:',userid,'Type:',Type);
 												
 											},
 											fail:function(err){
@@ -141,39 +137,33 @@
 												getApp().globalData.userid = user.userid
 											)
 											
-										}, 2000);
-										//********************************************************
-										uni.showToast({
-											icon: 'none',
-											title: 'user存入global成功'
-										})
-										//};
 										
-										//uni.setStorageSync("user", user)
-											uni.navigateTo({
-												url:'../register/register'
-											})
-										// if(res.data.data.type == -1) {
-										// 	uni.navigateTo({
-										// 		url:'../register/register'
-										// 	})
-										// }
-
-
-
-										// if(res.data.data.type != -1) {
-										// 	uni.showToast({
-										// 		title:'登陆成功',
-										// 		icon:'success'
-										// 	})
-										// 	uni.switchTab({
-										// 		url:'../index/index'
-										// 	})
-										// }
+										    // uni.showToast({
+										    // 	icon: 'none',
+										    // 	title: 'user存入global成功'
+										    // })
+										    setTimeout(function(){
+										    	if(getApp().globalData.Type == -1) {
+										            uni.navigateTo({
+										    	    url:'../register/register'
+								     	            })
+										    	}
+										    	if(getApp().globalData.Type != -1) {
+										        	// uni.showToast({
+										        	// 	title:'登陆成功',
+										        	// 	icon:'success'
+										        	// })
+										        	uni.switchTab({
+										        		url:'../index/index'
+										        	})
+										        }
+										    										
+										    
+										    },100)
+									    }, 1000);
 									},
 									fail: function(err) {
-										console.log("获取openid失败: ", err)
-										//********************************************************
+										console.log("获取token失败: ", err)
 										uni.showToast({
 											icon: 'none',
 											title: '获取token失败'

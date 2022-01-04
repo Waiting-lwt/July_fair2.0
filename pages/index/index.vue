@@ -194,7 +194,7 @@
 			// 跳转到搜索页面
 			goSearch() {
 				uni.navigateTo({
-					url: "../search/search"
+					url: "../../pagesA/search/search"
 				})
 			},
 			// 点击显示遮罩层
