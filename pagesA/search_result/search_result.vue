@@ -4,7 +4,7 @@
 			<view class="btn-goback" @click="goBackToSearch()">
 				<image src="../../static/images/left.png" mode="aspectFill"></image>
 			</view>
-			<view class="input-box"><input type="text" value="" /></view>
+			<view class="input-box"><input type="text" value="" v-model="keyword"/></view>
 			<view class="fdj">
 				<image src="../../static/images/fdj.png" mode=""></image>
 			</view>
@@ -361,7 +361,10 @@
 		.input-box {
 			flex: 1;
 			border-radius: 40rpx;
-			border: 2rpx solid;
+			background-color: #F7f7f7;
+			>input {
+				padding-left: 40rpx;
+			}
 		}
 
 	}

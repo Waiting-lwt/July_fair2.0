@@ -68,9 +68,7 @@
 			
 			
 			searchStart: function() {	//触发搜索
-			uni.navigateTo({
-								url: "../../pages/search_result/search_result?keyword=" + this.searchText
-							})
+			
 				let _this = this;
 				if (_this.searchText == '') {
 					uni.showToast({
@@ -79,6 +77,9 @@
 						duration: 1000
 					});
 				}else{
+					uni.navigateTo({
+								url: "../../pagesA/search_result/search_result?keyword=" + this.searchText
+							})
 					_this.$emit('getSearchText', _this.searchText);
 					uni.getStorage({
 						key:'search_cache',
@@ -105,6 +106,8 @@
 								key: 'search_cache',
 								data: _this.hList
 							});
+							
+							
 						},
 						fail() {
 							_this.hList = [];

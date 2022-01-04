@@ -1,4 +1,5 @@
-const BASE_URL='http://120.24.48.171:8081'
+const BASE_URL='https://fancrazy.xyz:8081'
+//const BASE_URL='http://120.24.48.171:8081'
 export const myRequest = (option) => {
 	return new Promise((resolve, reject) => {
 		uni.request({

@@ -4,7 +4,7 @@
         "ignore": []
     },
     "setting": {
-        "urlCheck": false,
+        "urlCheck": true,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -40,7 +40,7 @@
     },
     "compileType": "miniprogram",
     "libVersion": "",
-    "appid": "wx168d95e4e0c312dc",
+    "appid": "touristappid",
     "projectname": "July_fair",
     "condition": {
         "search": {

@@ -102,6 +102,14 @@
   width: 488rpx;
   background-color: #E8E8E8;
 }
+.container .items-paimai .items-paimai-list .noPerson {
+  margin-left: 172rpx;
+}
+.container .items-paimai .items-paimai-list .noPerson .noPersonText {
+  color: #4F73A5;
+  font-size: 24rpx;
+  margin-top: 70rpx;
+}
 .container .items-paimai .items-paimai-list .goodsList-items {
   display: flex;
   flex-direction: column;
@@ -160,7 +168,7 @@
 .container .items-paimai .btn-paimai {
   width: 142rpx;
   height: 142rpx;
-  background-color: #C2C2C2;
+  background-color: #006AD7;
 }
 .container .items-paimai .btn-paimai .btn-paimai-image {
   width: 62rpx;
