@@ -1,85 +1,84 @@
 {
-    "pages": [
-        "pages/login/login",
-        "pages/index/index",
-        "pages/select-tags/select-tags",
-        "pages/auction/auction",
-        "pages/my/my",
-        "components/springTabs/springTabs",
-        "pages/register/register",
-        "pages/orders-select-address/orders-select-address",
-        "pages/goods-success-order/goods-success-order",
-        "pages/goods-success-order-logistics/goods-success-order-logistics"
-    ],
-    "subPackages": [
-        {
-            "root": "pagesA",
-            "pages": [
-                "search/search",
-                "auctions-release/auctions-release",
-                "search_result/search_result",
-                "goods-release/goods-release",
-                "auctions_goods-tagsadd/auctions_goods-tagsadd"
-            ]
-        },
-        {
-            "root": "pagesB",
-            "pages": [
-                "auction-goodsdetail-userlist/auction-goodsdetail-userlist",
-                "goods-confirm-buy/goods-confirm-buy",
-                "goods-detail-auction/goods-detail-auction",
-                "goods-detail/goods-detail",
-                "goods-success-order/goods-success-order",
-                "goods-success-order-logistics/goods-success-order-logistics"
-            ]
-        },
-        {
-            "root": "pagesC",
-            "pages": [
-                "my-address/my-address",
-                "my-selectaddress/my-selectaddress",
-                "person-me/person-me"
-            ]
-        },
-        {
-            "root": "pagesD",
-            "pages": [
-                "auctions-success-address/auctions-success-address",
-                "auctions-success-order/auctions-success-order",
-                "my-orders/my-orders",
-                "my-collections/my-collections",
-                "my-morehistory/my-morehistory"
-            ]
-        }
-    ],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#F8F8F8"
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/select-tags/select-tags",
+    "pages/auction/auction",
+    "pages/my/my",
+    "components/springTabs/springTabs",
+    "pages/register/register",
+    "pages/orders-select-address/orders-select-address",
+    "pages/goods-success-order/goods-success-order",
+    "pages/goods-success-order-logistics/goods-success-order-logistics"
+  ],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "search/search",
+        "auctions-release/auctions-release",
+        "search_result/search_result",
+        "goods-release/goods-release",
+        "auctions_goods-tagsadd/auctions_goods-tagsadd"
+      ]
     },
-    "tabBar": {
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "./static/icon/bazzar.png",
-                "selectedIconPath": "./static/icon/bazzarSelected.png"
-            },
-            {
-                "pagePath": "pages/auction/auction",
-                "iconPath": "./static/icon/wander.png",
-                "selectedIconPath": "./static/icon/wanderSelected.png"
-            },
-            {
-                "pagePath": "pages/my/my",
-                "iconPath": "./static/icon/mine.png",
-                "selectedIconPath": "./static/icon/mineSelected.png"
-            }
-        ]
+    {
+      "root": "pagesB",
+      "pages": [
+        "auction-goodsdetail-userlist/auction-goodsdetail-userlist",
+        "goods-confirm-buy/goods-confirm-buy",
+        "goods-detail-auction/goods-detail-auction",
+        "goods-detail/goods-detail",
+        "goods-success-order/goods-success-order",
+        "goods-success-order-logistics/goods-success-order-logistics"
+      ]
     },
-    "usingComponents": {
-        "loading": "/components/loading/loading",
-        "spring-tabs": "/components/springTabs/springTabs",
-        "tabs": "/components/Tabs/Tabs"
+    {
+      "root": "pagesC",
+      "pages": [
+        "my-address/my-address",
+        "my-selectaddress/my-selectaddress",
+        "person-me/person-me"
+      ]
     },
-    "sitemapLocation": "sitemap.json"
+    {
+      "root": "pagesD",
+      "pages": [
+        "auctions-success-address/auctions-success-address",
+        "auctions-success-order/auctions-success-order",
+        "my-orders/my-orders",
+        "my-collections/my-collections",
+        "my-morehistory/my-morehistory"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./static/icon/bazzar.png",
+        "selectedIconPath": "./static/icon/bazzarSelected.png"
+      },
+      {
+        "pagePath": "pages/auction/auction",
+        "iconPath": "./static/icon/wander.png",
+        "selectedIconPath": "./static/icon/wanderSelected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "./static/icon/mine.png",
+        "selectedIconPath": "./static/icon/mineSelected.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "loading": "/components/loading/loading",
+    "spring-tabs": "/components/springTabs/springTabs",
+    "tabs": "/components/Tabs/Tabs"
+  }
 }

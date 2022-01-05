@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var regionPicker = function regionPicker() {Promise.all(/*! require.ensure | components/region-picker/region-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/region-picker/region-picker")]).then((function () {return resolve(__webpack_require__(/*! ../../components/region-picker/region-picker.vue */ 297));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var regionPicker = function regionPicker() {Promise.all(/*! require.ensure | components/region-picker/region-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/region-picker/region-picker")]).then((function () {return resolve(__webpack_require__(/*! ../../components/region-picker/region-picker.vue */ 313));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 
