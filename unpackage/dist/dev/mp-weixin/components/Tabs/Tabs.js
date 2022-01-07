@@ -167,48 +167,7 @@ var _default =
   //在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作
   mounted: function mounted() {
     console.log("mounted");
-  },
-
-
-  /**
-      * 生命周期函数--监听页面加载
-      */
-  onLoad: function onLoad(option) {
-    console.log("load");
-  },
-  /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-  onReady: function onReady() {
-    console.log("unready");},
-  /**
-                               * 生命周期函数--监听页面显示
-                               */
-  onShow: function onShow() {
-    console.log("show");},
-  /**
-                            * 生命周期函数--监听页面隐藏
-                            */
-  onHide: function onHide() {
-    console.log("hide");},
-  /**
-                            * 生命周期函数--监听页面卸载
-                            */
-  onUnload: function onUnload() {
-    console.log("unload");
-  },
-  /**
-      * 页面相关事件处理函数--监听用户下拉动作
-      */
-  onPullDownRefresh: function onPullDownRefresh() {},
-  /**
-                                                       * 页面上拉触底事件的处理函数
-                                                       */
-  onReachBottom: function onReachBottom() {},
-  /**
-                                               * 用户点击右上角分享
-                                               */
-  onShareAppMessage: function onShareAppMessage() {} };exports.default = _default;
+  } };exports.default = _default;
 
 /***/ }),
 
